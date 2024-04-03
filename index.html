@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(14, 2, 2);
+        }
+
+        h1 {
+            color: white;
+        }
+
+        #demo {
+            color: white;
+        }
+
+        #heading {
+            color: white;
+        }
+
+        .list-of-nodes {
+            color: white;
+        }
+        p{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ReactJS Developer</h1>
+    <button onclick="alert('welcome,eoseo')">Welcome</button>
+    <p id="demo"></p>
+    <button onclick="myFavourite()">Try it</button>
+    <p id="heading">hello,how are you!</p>
+    <ul class="list-of-nodes">
+        <li>1 node</li>
+        <li>2 node</li>
+        <li>3 node</li>
+        <li>4 node</li>
+        <!-- <li>5 node</li> -->
+        <li style="display: none">6 node</li>
+    </ul>
+    <h1>Simple TO-DO App</h1>
+    <input type="text" id="inputField" />
+    <button class="btn">click me</button>
+    <div class="todoListElement"></div>
+    <script>
+        alert('welcome');
+        console.log("thapa technical");
+        function myFavourite() {
+            let text;
+            let favDrink = prompt("what is your favourite drink");//The prompt() method displays a dialog box that prompts the user for input.
+            switch (favDrink) {
+                case "coca-cola":
+                    text = "coca-cola is my favourite";
+                    console.log(text, "coca-cola");
+                    break;
+                case "sprite":
+                    text = "sprite is my favourite";
+                    console.log(text, "sprite");
+                    break;
+                case "pepsi":
+                    text = "pepsi is my favourite";
+                    console.log(text, "pepsi");
+                    break;
+                default:
+                    text = "no one is my favourite";
+                    console.log(text);
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+        var inputElem = document.getElementById("inputField");
+        var btnElem = document.querySelector(".btn");
+        // var todoElem = document.getElementById("todofirst");
+        var listElem = document.querySelector(".todoListElement");
+        console.log(inputElem);
+        console.log(btnElem);
+        const addToDo = () => {
+            // console.log(inputElem.value);
+            // todoElem.textContent=inputElem.value;
+            var pElem=document.createElement("p");
+            pElem.textContent = inputElem.value;
+            listElem.append(pElem);
+            inputElem.value = null;
+
+        };
+        btnElem.addEventListener("click",() =>{
+            addToDo();
+        });
+        listElem.addEventListener("click",(e) =>{
+            // console.log(e.target);
+            let currElem = e.target;
+            currElem.remove();
+        })
+
+    </script>
+    <script src="intro.js"></script>
+</body>
+
+</html>
