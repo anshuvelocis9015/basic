@@ -59,11 +59,11 @@
 
 // // var a = 7;
 // // var a = 8;
-// // console.log(a);//a variable name cannot be declare with same name in the same execution context
+// // console.log(a);//a variable name can be re-declare with same name in the same execution context,but only it occur in var case 
 
 // // let a = 7;
 // // let a = 8;
-// // console.log(a);
+// // console.log(a); //a variable name cannot be re-declare with same name in the same execution context,but only it occur in let case 
 
 // // const a = 8;
 // // const a = 9;
